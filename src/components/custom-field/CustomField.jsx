@@ -11,8 +11,12 @@ export default function CustomField(props) {
         props.onChange(props.credentialKey, event.target.value);
     }
 
+    function checkError(error) {
+        return error !== '';
+    }
+
     return (
-        <FormControl error={!!props.error}>
+        <FormControl error={checkError(props.error)}>
             <InputLabel htmlFor={props.id}>{props.label} *</InputLabel>
             <Input
                 required
@@ -22,7 +26,7 @@ export default function CustomField(props) {
                 placeholder={props.placeholder}
                 onChange={handleChange}
             />
-            { props.error && <FormHelperText>{props.error}</FormHelperText>}
+            { checkError(props.error) && <FormHelperText>{props.error}</FormHelperText>}
         </FormControl>
     );
 }

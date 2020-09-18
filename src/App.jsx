@@ -8,6 +8,7 @@ import Header from './layouts/header/Header';
 import MainBody from "./layouts/body/MainBody";
 import Footer from "./layouts/footer/Footer";
 import {Container} from "@material-ui/core";
+import MainBodyHook from "./layouts/body/MainBodyHook";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,7 +32,7 @@ function App() {
                     </Grid>
                     <Grid item xs={12}>
                         <Paper className={classes.paper} elevation={3}>
-                            <MainBody/>
+                            <MainBodyHook/>
                         </Paper>
                     </Grid>
                     <Grid item xs={12}>
