@@ -9,6 +9,7 @@ import MainBody from "./layouts/body/MainBody";
 import Footer from "./layouts/footer/Footer";
 import {Container} from "@material-ui/core";
 import MainBodyHook from "./layouts/body/MainBodyHook";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,9 +32,11 @@ function App() {
                         <Header/>
                     </Grid>
                     <Grid item xs={12}>
-                        <Paper className={classes.paper} elevation={3}>
-                            <MainBodyHook/>
-                        </Paper>
+                        <Router>
+                            <Paper className={classes.paper} elevation={3}>
+                                <MainBodyHook/>
+                            </Paper>
+                        </Router>
                     </Grid>
                     <Grid item xs={12}>
                         <Footer/>

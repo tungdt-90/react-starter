@@ -6,11 +6,6 @@ import FormHelperText from "@material-ui/core/FormHelperText";
 
 export default function CustomField(props) {
 
-    function handleChange(event) {
-        event.preventDefault();
-        props.onChange(props.credentialKey, event.target.value);
-    }
-
     function checkError(error) {
         return error !== '';
     }
@@ -22,9 +17,10 @@ export default function CustomField(props) {
                 required
                 type={props.type}
                 id={props.id}
+                name={props.credentialKey}
                 defaultValue={props.defaultValue}
                 placeholder={props.placeholder}
-                onChange={handleChange}
+                onChange={props.onChange}
             />
             { checkError(props.error) && <FormHelperText>{props.error}</FormHelperText>}
         </FormControl>

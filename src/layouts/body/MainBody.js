@@ -1,6 +1,6 @@
 import React from "react";
 import './main-body.scss';
-import LoginForm from "../../components/login/Login";
+import LoginForm from "../../components/login/LoginForm";
 import MockApi from "../../core/mock-api/mock-api";
 import Card from "@material-ui/core/Card";
 import {CardHeader} from "@material-ui/core";

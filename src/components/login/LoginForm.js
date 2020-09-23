@@ -51,7 +51,7 @@ export default function LoginForm(props) {
                          placeholder={setStaticTextValue(key).placeholder}
                          defaultValue={props.credential[key]}
                          credentialKey={key}
-                         onChange={(credentialKey, value) => props.onChange({credentialKey, value})}
+                         onChange={props.onChange}
             />
         )
     });

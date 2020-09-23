@@ -8,4 +8,8 @@ export default class MockApi {
             password
         });
     }
+
+    async getList() {
+        return await axios.get(SERVER_API_URL + '/users');
+    }
 }
